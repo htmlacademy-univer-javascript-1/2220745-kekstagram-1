@@ -67,5 +67,3 @@ const createUser = () => {
 };
 
 const users = Array.from({length: USERS_COUNT}, createUser);
-
-console.log(users);
