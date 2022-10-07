@@ -1,4 +1,5 @@
 import {createdPictures} from './data.js';
+import { addPictureEventHandler } from './full-picture.js';
 
 const pictureTemplate = document.querySelector('#picture').content;
 const pictureItemTemplate = pictureTemplate.querySelector('.picture');
@@ -10,6 +11,7 @@ const createPictureItem = (item) => {
   newPicture.querySelector('.picture__img').src = item.url;
   newPicture.querySelector('.picture__likes').textContent = item.likes;
   newPicture.querySelector('.picture__comments').textContent = item.comments.length;
+  addPictureEventHandler(newPicture, item);
   return newPicture;
 };
 
@@ -26,3 +28,5 @@ const showPictures = () => {
 };
 
 showPictures();
+
+export {picturesList};
