@@ -2,10 +2,8 @@ const uploadControl = document.querySelector('.img-upload__start');
 const editForm = document.querySelector('.img-upload__overlay');
 const editFormCloseButton = editForm.querySelector('.img-upload__cancel');
 
-editForm.querySelector('.img-upload__text').addEventListener('keydown', (evt) => evt.stopPropagation());
-
 const onDocumentEscKeyDown  = (evt) => {
-  if (evt.key === 'Escape') {
+  if (evt.key === 'Escape' && !evt.target.classList.contains('text_hashtags') && !evt.target.classList.contains('text__description')) {
     editForm.classList.add('hidden');
     document.body.classList.remove('modal-open');
 
