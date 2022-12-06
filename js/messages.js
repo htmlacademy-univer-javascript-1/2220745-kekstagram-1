@@ -3,9 +3,9 @@ import { closeForm, closeFormWithDefaultSettings } from './upload-form.js';
 
 const bodyElement = document.querySelector('body');
 
-const successfullUploadElement = document.querySelector('#success').content;
-const errorUploadElement = document.querySelector('#error').content;
-const errorElement= document.querySelector('#load-error').content;
+const successfullUploadElement = bodyElement.querySelector('#success').content;
+const errorUploadElement = bodyElement.querySelector('#error').content;
+const errorElement= bodyElement.querySelector('#load-error').content;
 
 const onDocumentEscKeyDown = (evt) => {
   const message = bodyElement.querySelector('.popup');
